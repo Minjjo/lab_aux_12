@@ -1,0 +1,233 @@
+---
+import Logo1 from "./Logos/Logo1.astro";
+import Logo2 from "./Logos/Logo2.astro";
+import Logo3 from "./Logos/Logo3.astro";
+import Logo4 from "./Logos/Logo4.astro";
+import Logo5 from "./Logos/Logo5.astro";
+import Logo6 from "./Logos/Logo6.astro";
+---
+<div class="nav">
+    <ul class="logos-container">
+        <li class="logo">
+            <Logo1 class="logo-image" />
+            <div class="text-container">
+                <p style="color: #9C51FF;">Processing</p>
+                <p style="color: #9C51FF;">Foundation</p>
+            </div>
+        </li>
+        <li class="logo">
+            <Logo2 class="logo-image" />
+            <div class="text-container">
+                <p style="color: #0468FF;">Processing</p>
+            </div>
+        </li>
+        <li class="logo">
+            <Logo3 class="logo-image" />
+            <div class="text-container">
+                <p style="color:#ED225D;">p5.js</p>
+            </div>
+        </li>
+        <li class="logo">
+            <Logo4 class="logo-image" />
+            <div class="text-container">
+                <p style="color:#98C829;">Processing</p>
+                <p style="color:#98C829;">Android</p>
+            </div>
+        </li>
+        <li class="logo">
+            <Logo5 class="logo-image" />
+            <div class="text-container">
+                <p style="color: #2D9E97;">Processing</p>
+                <p style="color: #2D9E97;">Python</p>
+            </div>
+        </li>
+    </ul>
+</div>
+<hr>
+
+<div class="container">
+    <div class="nav2">
+        <button class="menu-button">☰</button>
+        <ul class="nav2-logos-container">
+            <li class="nav2-logo6">
+                <Logo6 class="nav2-logo-image" />
+                <p>Processing</p>
+            </li>
+            <li class="nav2-logo">
+                <p>Download</p>
+            </li>
+            <li class="nav2-logo">
+                <p>Documentation</p>
+            </li>
+            <li class="nav2-logo">
+                <p>Learn</p>
+            </li>
+            <li class="nav2-logo">
+                <p>Teach</p>
+            </li>
+            <li class="nav2-logo">
+                <p>About</p>
+            </li>
+            <li class="nav2-logo">
+                <p>Donate</p>
+            </li>
+        </ul>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search">
+        <img src="https://media.istockphoto.com/vectors/magnifying-glass-line-icon-thin-line-design-vector-icon-vector-id1066964928?b=1&k=6&m=1066964928&s=170667a&w=0&h=MgE8_Gxq4cUNo7LLxBtHKsK_zROUlaaPGEr4SsfYpSI=" alt="Search" class="search-icon">
+    </div>
+</div>
+
+<style>
+.nav {
+    padding: 10px;
+}
+
+.logos-container {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    margin-left: 30px; 
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.logo-image {
+    width: 100px; 
+    height: auto; 
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+.text-container p {
+    margin: 0; 
+}
+
+.nav2 {
+    padding: 10px;
+    color: #0F195A;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.nav2-logos-container {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav2-logo {
+    padding: 10px;
+    color: #0F195A;
+    margin-right: 20px; 
+}
+
+.nav2-logo6 {
+    display: flex;
+    align-items: center;
+    margin-right: 70px; 
+    width: 15%;
+    font-size: 25px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.search input {
+    padding: 8px 30px 8px 8px; 
+    border-radius: 20px; 
+    border: 1px solid #ccc;
+}
+
+.search-icon {
+    position: absolute;
+    right: 10px;
+    width: 20px; 
+    height: auto;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .nav2 {
+        flex-direction: column;
+    }
+
+    .menu-button {
+        display: block;
+        background: none;
+        border: none;
+        font-size: 24px;
+        cursor: pointer;
+        color: #0F195A;
+        font-weight: bold;
+    }
+
+    .nav2-logos-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .nav2-logos-container.show {
+        display: flex;
+    }
+
+    .nav2-logos-container li {
+        margin: 10px 0;
+    }
+
+    .search {
+        width: 100%;
+        margin-top: 10px;
+    }
+
+    .menu-button:checked + .nav2-logos-container {
+        display: flex;
+    }
+}
+
+@media (min-width: 769px) {
+    .menu-button {
+        display: none;
+    }
+
+    .nav2 {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav2-logos-container {
+        display: flex;
+    }
+
+    .search {
+        margin-left: auto;
+    }
+}
+
+
+</style>
